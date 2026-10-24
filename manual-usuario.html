@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual do Usuário - Calculadora INSS Obra Legal</title>
+    <link rel="icon" type="image/png" href="public/uploads/favicons/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body { background: #f8f9fa; }
+        .sidebar { min-height: 100vh; background: #2c5aa0; color: #fff; }
+        .sidebar .nav-link { color: #fff; }
+        .sidebar .nav-link.active, .sidebar .nav-link:hover { background: #1e3a5f; color: #fff; }
+        .content { padding: 2rem; }
+        .manual-img { border: 1px solid #dee2e6; border-radius: 8px; margin: 1rem 0; max-width: 100%; }
+        .manual-iframe { border: 1px solid #dee2e6; border-radius: 8px; margin: 1rem 0; background: #fff; }
+        @media (max-width: 768px) {
+            .sidebar { min-height: auto; }
+            .content { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar de Navegação -->
+        <nav class="col-md-3 col-lg-2 d-md-block sidebar py-4">
+            <div class="position-sticky">
+                <h4 class="mb-4">Manual do Usuário</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link active" href="#introducao">1. Introdução</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#acesso">2. Acesso ao Sistema</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#navegacao">3. Navegação e Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#dashboard">4. Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#minhas-simulacoes">5. Minhas Simulações</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#validacao-dados">6. Validação de Dados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nova-simulacao">7. Nova Simulação</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#planejamento-tributario-detalhado">8. Planejamento Tributário</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#integracao-esocial-sero">9. Integração eSocial/SERO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#administracao">10. Administração</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#configuracoes">11. Configurações do Sistema</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#temas">12. Temas e Visual</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#selic">13. SELIC</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#relatorios">14. Relatórios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#perfil">15. Perfil do Usuário</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#problemas">16. Resolução de Problemas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#suporte">17. Suporte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">18. Perguntas Frequentes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#glossario">19. Glossário</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Conteúdo Central -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 content">
+            <section id="introducao">
+                <h2>1. Introdução</h2>
+                
+                <h3>1.1 Sobre o Sistema</h3>
+                <p><strong>Calculadora INSS Obra Legal ®</strong> é uma solução web profissional para simulação de cálculo do INSS em obras civis, especialmente por aferição indireta, conforme a Instrução Normativa RFB nº 2.021/2021. Seu público-alvo são profissionais da construção civil e da área contábil.</p>
+                <p>O sistema automatiza e profissionaliza o cálculo do INSS devido em obras civis, gera relatórios detalhados prontos para apresentação, e oferece segurança, histórico e facilidade de uso para empresas e contadores.</p>
+
+                <h3>1.2 Principais Funcionalidades</h3>
+                <ul>
+                    <li><strong>Simulação de INSS para obras:</strong> O usuário preenche dados da obra e o sistema calcula automaticamente o valor devido.</li>
+                    <li><strong>Relatórios em PDF:</strong> Geração automática de relatórios profissionais e detalhados.</li>
+                    <li><strong>Histórico de simulações:</strong> Registro completo de todas as simulações realizadas, com possibilidade de consulta e reimpressão.</li>
+                    <li><strong>Exportação de dados:</strong> Exportação de simulações em CSV.</li>
+                    <li><strong>Gestão de usuários:</strong> Controle de acesso por categorias (Administrador, Cliente, Lead).</li>
+                    <li><strong>Personalização visual:</strong> Configuração de logo, cores, dados da empresa e tema.</li>
+                    <li><strong>Segurança:</strong> Criptografia, controle de acesso e proteção de dados.</li>
+                    <li><strong>Acesso móvel:</strong> Interface responsiva para uso em computadores, tablets e smartphones.</li>
+                </ul>
+
+                <h3>1.3 Tipos de Usuário</h3>
+                <ul>
+                    <li><strong>Administrador:</strong> Acesso completo ao sistema, incluindo gestão de usuários e configurações.</li>
+                    <li><strong>Cliente:</strong> Acesso às Simulações e Planejamento Tributário.</li>
+                    <li><strong>Lead:</strong> Acesso limitado às Simulações. Não pode fazer Planejamento Tributário.</li>
+                </ul>
+
+                <h3>1.4 Requisitos do Sistema</h3>
+                <ul>
+                    <li>Navegador web moderno (Chrome, Firefox, Safari, Edge)</li>
+                    <li>Conexão com internet</li>
+                    <li>JavaScript habilitado</li>
+                    <li>Pop-ups permitidos (para geração de PDFs)</li>
+                </ul>
+            </section>
+            <section id="acesso">
+                <h2>2. Acesso ao Sistema</h2>
+                
+                <h3>2.1 Primeiro Acesso e Cadastro</h3>
+                       <p><strong>Exemplo da tela de Login:</strong></p>
+       <img src="public/assets/tela-login.jpg" alt="Tela de Login" class="manual-img">
+                
+                <ol>
+                    <li><strong>Acesse a tela de cadastro</strong> clicando em <button class="btn btn-link p-0 align-baseline"><i class="fas fa-user-plus"></i> Criar conta</button> na tela de login ou acessando diretamente o endereço de cadastro.</li>
+                    <li><strong>Preencha seu nome, e-mail e senha</strong> no formulário de cadastro.</li>
+                    <li><strong>Confirme o cadastro</strong>. Se o e-mail ainda não estiver cadastrado, sua conta será criada automaticamente como <strong>Lead</strong>.</li>
+                    <li><strong>Faça login</strong> usando o e-mail e senha cadastrados.</li>
+                </ol>
+                <p>Observação: O perfil <strong>Lead</strong> tem acesso limitado às Simulações e não pode acessar o Planejamento Tributário. Para obter acesso completo, entre em contato com um Administrador do sistema para solicitar a promoção do seu perfil.</p>
+
+                <h3>2.2 Login Diário</h3>
+                <ol>
+                    <li>Acesse a tela de login do sistema.</li>
+                    <li>Informe seu e-mail e senha cadastrados.</li>
+                    <li>Clique em <button class="btn btn-primary btn-sm"><i class="fas fa-sign-in-alt"></i> Entrar</button> para acessar o sistema.</li>
+                </ol>
+                <p>Se ainda não possui conta, clique em <button class="btn btn-link p-0 align-baseline"><i class="fas fa-user-plus"></i> Criar conta</button> para se cadastrar como Lead.</p>
+
+                <h3>2.3 Perfis de Acesso</h3>
+                <ul>
+                    <li><strong>Lead:</strong> Pode acessar e realizar Simulações. Não tem acesso ao Planejamento Tributário.</li>
+                    <li><strong>Cliente:</strong> Pode acessar Simulações e Planejamento Tributário.</li>
+                    <li><strong>Administrador:</strong> Tem acesso completo ao sistema, incluindo gestão de usuários e configurações.</li>
+                </ul>
+                <p>Usuários Lead podem ser promovidos a Cliente ou Administrador por um Administrador do sistema.</p>
+
+                <h3>2.4 Recuperação de Senha</h3>
+                <p><strong>Cenário:</strong> Você esqueceu sua senha e não consegue acessar o sistema.</p>
+                <p><strong>Solução:</strong></p>
+                <ol>
+                    <li>Na tela de login, clique em <strong>"Esqueci minha senha"</strong> (se disponível) ou entre em contato com o Administrador.</li>
+                    <li>Siga as instruções para redefinir sua senha.</li>
+                </ol>
+
+                <h3>2.5 Dicas de Segurança</h3>
+                <ul>
+                    <li>Use senhas com pelo menos 8 caracteres.</li>
+                    <li>Combine letras maiúsculas, minúsculas, números e símbolos.</li>
+                    <li>Não compartilhe sua senha com outros usuários.</li>
+                    <li>Altere sua senha periodicamente.</li>
+                </ul>
+
+                <h3>2.6 Problemas de Acesso</h3>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Problema</th>
+                            <th>Solução</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>E-mail não reconhecido</td>
+                            <td>Verifique se digitou corretamente ou cadastre-se como novo usuário.</td>
+                        </tr>
+                        <tr>
+                            <td>Senha incorreta</td>
+                            <td>Use a recuperação de senha ou contate o suporte.</td>
+                        </tr>
+                        <tr>
+                            <td>Conta bloqueada</td>
+                            <td>Entre em contato com o Administrador do sistema.</td>
+                        </tr>
+                        <tr>
+                            <td>Página não carrega</td>
+                            <td>Verifique sua conexão com a internet.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="navegacao">
+                <h2>3. Navegação e Menu Principal</h2>
+                
+                <h3>3.1 Estrutura do Menu</h3>
+                <p>Após o login, o sistema apresenta um menu lateral organizado por categorias. Os itens disponíveis variam conforme o perfil do usuário:</p>
+                
+                <h4>Para Administrador:</h4>
+                <ul>
+                    <li><strong>Dashboard:</strong> visão geral do sistema e atalhos rápidos</li>
+                    <li><strong>Nova Simulação:</strong> criar uma nova simulação de INSS</li>
+                    <li><strong>Minhas Simulações:</strong> lista e gerenciamento das simulações criadas</li>
+                    <li><strong>Planejamento Tributário:</strong> acesso ao módulo de planejamento tributário</li>
+                    <li><strong>Administração:</strong> gerenciamento de usuários e estatísticas</li>
+                    <li><strong>Configurações do Sistema:</strong> ajuste de informações institucionais</li>
+                    <li><strong>Temas e Visual:</strong> personalização de cores, fontes e layout</li>
+                    <li><strong>SELIC:</strong> histórico e importação de taxas SELIC</li>
+                    <li><strong>Relatórios:</strong> geração de relatórios detalhados</li>
+                    <li><strong>Perfil:</strong> edição de dados pessoais e senha</li>
+                    <li><strong>Sair:</strong> encerra a sessão</li>
+                </ul>
+                <p><strong>Exemplo de menu para Administrador:</strong></p>
+                <img src="public/assets/print-tela-inicial-admin.webp" alt="Menu Administrador" class="manual-img">
+
+                <h4>Para Cliente:</h4>
+                <ul>
+                    <li><strong>Dashboard:</strong> visão geral do sistema e atalhos rápidos</li>
+                    <li><strong>Nova Simulação:</strong> criar uma nova simulação de INSS</li>
+                    <li><strong>Minhas Simulações:</strong> lista e gerenciamento das simulações criadas</li>
+                    <li><strong>Planejamento Tributário:</strong> acesso ao módulo de planejamento tributário</li>
+                    <li><strong>Relatórios:</strong> geração de relatórios detalhados</li>
+                    <li><strong>Perfil:</strong> edição de dados pessoais e senha</li>
+                    <li><strong>Sair:</strong> encerra a sessão</li>
+                </ul>
+                <p><strong>Exemplo de menu para Cliente:</strong></p>
+                <img src="public/assets/print-tela-inicial-cliente.webp" alt="Menu Cliente" class="manual-img">
+
+                <h4>Para Lead:</h4>
+                <ul>
+                    <li><strong>Nova Simulação:</strong> criar uma nova simulação de INSS</li>
+                    <li><strong>Minhas Simulações:</strong> lista e gerenciamento das simulações criadas</li>
+                    <li><strong>Relatórios:</strong> geração de relatórios das simulações</li>
+                    <li><strong>Perfil:</strong> edição de dados pessoais e senha</li>
+                    <li><strong>Sair:</strong> encerra a sessão</li>
+                </ul>
+                <p><strong>Exemplo de menu para Lead:</strong></p>
+                <img src="public/assets/print-tela-inicial-lead.webp" alt="Menu Lead" class="manual-img">
+                <p><em>Observação: Usuários Lead não visualizam o Dashboard nem o menu de Planejamento Tributário.</em></p>
+
+                <h3>3.2 Como Navegar</h3>
+                <h4>Usando o Menu Lateral:</h4>
+                <ul>
+                    <li>Clique no item desejado para acessar a tela correspondente</li>
+                    <li>O item ativo fica destacado com a cor do tema</li>
+                    <li>Use a barra de rolagem se houver muitos itens</li>
+                </ul>
+
+                <h4>Usando o Menu Superior:</h4>
+                <ul>
+                    <li>Algumas telas podem apresentar atalhos ou menus adicionais na parte superior</li>
+                </ul>
+                </section>
+            <section id="dashboard">
+                <h2>4. Dashboard</h2>
+                
+                <h3>4.1 Visão Geral</h3>
+                <p>O Dashboard é a tela inicial do sistema para usuários dos perfis <strong>Cliente</strong> e <strong>Administrador</strong>, apresentando um resumo visual das principais informações e métricas.</p>
+                <p><em>Usuários do perfil <strong>Lead</strong> não têm acesso ao Dashboard. Após o login, Leads são direcionados diretamente para a tela de Simulações.</em></p>
+                
+                <h3>4.2 Cards de Resumo</h3>
+                <p>Os cards de resumo exibem informações relevantes sobre as simulações e obras cadastradas pelo usuário ou pela empresa.</p>
+                <h4>Card "Minhas Simulações":</h4>
+                <ul>
+                    <li>Mostra o total de simulações criadas pelo usuário</li>
+                    <li>Clique para acessar a lista completa</li>
+                </ul>
+
+                <h4>Card "Valor Total INSS":</h4>
+                <ul>
+                    <li>Exibe a soma de todos os valores INSS das simulações</li>
+                    <li>Formato: R$ 0,00</li>
+                </ul>
+
+                <h4>Card "Área Total":</h4>
+                <ul>
+                    <li>Mostra a soma das áreas de todas as obras simuladas</li>
+                    <li>Formato: 0,00 m²</li>
+                </ul>
+
+                <h4>Card "Destinação Mais Comum":</h4>
+                <ul>
+                    <li>Indica o tipo de obra mais frequente nas simulações</li>
+                    <li>Exemplos: Residencial, Comercial, Industrial</li>
+                </ul>
+
+                <h3>4.3 Gráficos</h3>
+                <p>Os gráficos do Dashboard ajudam a visualizar tendências e distribuições das simulações realizadas.</p>
+                <h4>Gráfico de Linha - Simulações por Mês:</h4>
+                <ul>
+                    <li>Mostra a evolução das simulações nos últimos 6 meses</li>
+                    <li>Passe o mouse sobre os pontos para ver detalhes</li>
+                    <li>Útil para identificar tendências e sazonalidade</li>
+                </ul>
+
+                <h4>Gráfico de Pizza - Destinações:</h4>
+                <ul>
+                    <li>Distribuição das simulações por tipo de destinação</li>
+                    <li>Cores diferentes para cada categoria</li>
+                    <li>Percentual de cada tipo</li>
+                </ul>
+
+
+            </section>
+            <section id="minhas-simulacoes">
+                <h2>5. Minhas Simulações</h2>
+                
+                <h3>5.1 Visão Geral</h3>
+                <p>A tela "Minhas Simulações" é o centro de controle para gerenciar todas as simulações criadas pelo usuário. Nela, você encontra cards de resumo, filtros avançados, exportação de dados e uma tabela detalhada com todas as suas simulações.</p>
+                <p><strong>Exemplo da tela Minhas Simulações:</strong></p>
+                <img src="public/assets/print-tela-minhas-simulacoes.webp" alt="Tela Minhas Simulações" class="manual-img">
+
+                <h3>5.2 Cards de Resumo</h3>
+                <ul>
+                    <li><strong>Total de Simulações:</strong> Mostra o número total de simulações criadas.</li>
+                    <li><strong>Total INSS:</strong> Soma de todos os valores de INSS das simulações.</li>
+                    <li><strong>Tipos de Obra:</strong> Quantidade de simulações por tipo de obra.</li>
+                    <li><strong>Responsáveis:</strong> Quantidade de simulações por tipo de responsável.</li>
+                </ul>
+
+                <h3>5.3 Filtros e Exportação</h3>
+                <ul>
+                    <li>Filtros por <strong>Nome da Simulação</strong>, <strong>Destinação</strong>, <strong>Responsável</strong> e <strong>UF</strong>.</li>
+                    <li>Busca por nome com atualização automática.</li>
+                    <li>Botão <button class="btn btn-secondary btn-sm"><i class="fas fa-times"></i> Limpar Filtros</button> para resetar todos os campos.</li>
+                    <li>Botão <button class="btn btn-success btn-sm"><i class="fas fa-file-csv"></i> Exportar CSV</button> para baixar todas as simulações filtradas.</li>
+                    <li><em>Exibe até 100 registros mais recentes na tela. Use a exportação CSV para acessar todos os registros.</em></li>
+                </ul>
+
+                <h3>5.4 Tabela de Simulações</h3>
+                <ul>
+                    <li>Tabela com as colunas: <strong>Nome</strong>, <strong>Responsável</strong>, <strong>Regime Tributário</strong>, <strong>Destinação</strong>, <strong>UF</strong>, <strong>Área (m²)</strong>, <strong>INSS</strong>, <strong>Criado em</strong>, <strong>Ações</strong>.</li>
+                    <li>Seleção múltipla de simulações para ações em massa (exclusão).</li>
+                    <li>Mensagem amigável quando não há simulações cadastradas.</li>
+                    <li>Botão <button class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Nova Simulação</button> para criar uma nova simulação a qualquer momento.</li>
+                </ul>
+
+                <h3>5.5 Ações Disponíveis</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><i class="fas fa-eye text-primary me-2 fa-lg"></i><strong>Visualizar:</strong> Abre o relatório da simulação.</li>
+                    <li><i class="fas fa-edit text-warning me-2 fa-lg"></i><strong>Editar:</strong> Permite modificar os dados da simulação.</li>
+                    <li><i class="fas fa-copy text-info me-2 fa-lg"></i><strong>Duplicar:</strong> Cria uma cópia da simulação.</li>
+                    <li><i class="fas fa-trash text-danger me-2 fa-lg"></i><strong>Excluir:</strong> Remove a simulação (com confirmação).</li>
+                    <li><i class="fas fa-file-pdf text-success me-2 fa-lg"></i><strong>PDF:</strong> Gera o relatório da simulação em PDF (ícone de documento na coluna Ações).</li>
+                </ul>
+
+                <h3>5.6 Dicas de Uso</h3>
+                <ul>
+                    <li>Use nomes descritivos para facilitar a busca e organização das simulações.</li>
+                    <li>Utilize os filtros para encontrar rapidamente simulações específicas.</li>
+                    <li>Para acessar todas as simulações, utilize a exportação CSV.</li>
+                </ul>
+            </section>
+
+            <section id="validacao-dados">
+                <h2>6. Validação de Dados</h2>
+                
+                <h3>6.1 Visão Geral</h3>
+                <p>O sistema possui validação automática de dados em tempo real, garantindo a integridade e precisão das informações inseridas.</p>
+
+                <h3>6.2 Tipos de Validação</h3>
+                
+                <h4>Validação de Campos Obrigatórios:</h4>
+                <ul>
+                    <li><strong>Nome da Simulação:</strong> Campo obrigatório, não pode estar vazio</li>
+                    <li><strong>Responsável:</strong> Deve ser "Pessoa Física" ou "Pessoa Jurídica"</li>
+                    <li><strong>Destinação:</strong> Deve ser selecionada da lista disponível</li>
+                    <li><strong>Tipo de Obra:</strong> Deve ser "Alvenaria", "Madeira" ou "Mista"</li>
+                    <li><strong>UF:</strong> Deve ter exatamente 2 caracteres</li>
+                    <li><strong>Área Construída:</strong> Deve ser um número maior que zero</li>
+                </ul>
+
+                <h4>Validação de Regras de Negócio:</h4>
+                <ul>
+                    <li><strong>Regime Tributário:</strong> Obrigatório para Pessoa Jurídica</li>
+                    <li><strong>Área Mínima:</strong> Deve ser superior a 0 m²</li>
+                    <li><strong>UF Válida:</strong> Deve ser uma das 27 unidades federativas</li>
+                    <li><strong>Data de Referência:</strong> Para cálculo correto do VAU</li>
+                </ul>
+
+                <h3>6.3 Mensagens de Erro</h3>
+                
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Campo</th>
+                            <th>Erro</th>
+                            <th>Solução</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Responsável</td>
+                            <td>"Responsável deve ser 'Pessoa Física' ou 'Pessoa Jurídica'"</td>
+                            <td>Selecione uma das opções disponíveis</td>
+                        </tr>
+                        <tr>
+                            <td>Regime Tributário</td>
+                            <td>"Regime Tributário é obrigatório para Pessoa Jurídica"</td>
+                            <td>Selecione Simples Nacional, Lucro Presumido ou Lucro Real</td>
+                        </tr>
+                        <tr>
+                            <td>Tipo de Obra</td>
+                            <td>"Tipo de obra deve ser 'Alvenaria', 'Madeira' ou 'Mista'"</td>
+                            <td>Escolha o tipo correto da obra</td>
+                        </tr>
+                        <tr>
+                            <td>UF</td>
+                            <td>"UF deve ter 2 caracteres"</td>
+                            <td>Selecione uma UF válida da lista</td>
+                        </tr>
+                        <tr>
+                            <td>Área</td>
+                            <td>"Área construída deve ser um número maior que zero"</td>
+                            <td>Digite um valor positivo (ex: 150.50)</td>
+                        </tr>
+                        <tr>
+                            <td>Destinação</td>
+                            <td>"Destinação é obrigatória"</td>
+                            <td>Selecione uma destinação da lista</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>6.4 Validação em Tempo Real</h3>
+                
+                <h4>Durante o Preenchimento:</h4>
+                <ul>
+                    <li>Campos obrigatórios são destacados em vermelho se vazios</li>
+                    <li>Validação de formato para campos numéricos</li>
+                    <li>Verificação de dependências entre campos</li>
+                    <li>Feedback visual imediato</li>
+                </ul>
+
+                <h4>Na Submissão:</h4>
+                <ul>
+                    <li>Validação completa de todos os campos</li>
+                    <li>Lista de erros exibida no topo do formulário</li>
+                    <li>Campos com erro são destacados</li>
+                    <li>Formulário não é enviado até corrigir todos os erros</li>
+                </ul>
+
+                <h3>6.5 Dicas de Preenchimento</h3>
+                
+                <h4>Para Evitar Erros:</h4>
+                <ul>
+                    <li><strong>Nome Descritivo:</strong> Use nomes que identifiquem claramente a obra</li>
+                    <li><strong>Área Precisa:</strong> Use valores com até 2 casas decimais</li>
+                    <li><strong>UF Correta:</strong> Confirme a UF onde a obra será executada</li>
+                    <li><strong>Destinação Adequada:</strong> Escolha a que melhor representa o uso da obra</li>
+                </ul>
+
+                <h4>Campos Opcionais:</h4>
+                <ul>
+                    <li><strong>Município:</strong> Preencha para melhor identificação</li>
+                    <li><strong>Endereço:</strong> Útil para relatórios e documentação</li>
+                </ul>
+            </section>
+
+            <section id="nova-simulacao">
+                <h2>7. Nova Simulação</h2>
+                <h3>7.1 Visão Geral</h3>
+                <p>A tela de Nova Simulação permite que qualquer usuário autenticado crie uma simulação de INSS para uma obra, preenchendo os dados necessários para o cálculo automático.</p>
+                       <p><strong>Exemplo da tela de Nova Simulação:</strong></p>
+       <img src="public/assets/tela-nova-simulacao.jpg" alt="Tela de Nova Simulação" class="manual-img">
+                <h3>7.2 Como Preencher a Simulação</h3>
+                <ul>
+                    <li><strong>Responsável:</strong> Selecione se a obra é de Pessoa Física ou Jurídica.</li>
+                    <li><strong>Nome da Simulação:</strong> Dê um nome descritivo para identificar a simulação.</li>
+                    <li><strong>Destinação:</strong> Escolha o tipo de destinação da obra (ex: Casa Popular, Comercial, etc.).</li>
+                    <li><strong>Tipo de Obra:</strong> Selecione entre Alvenaria, Madeira ou Mista.</li>
+                    <li><strong>UF:</strong> Escolha a unidade federativa onde a obra está localizada.</li>
+                    <li><strong>Área (m²):</strong> Informe a área construída da obra.</li>
+                    <li><strong>Município:</strong> (Opcional) Informe o município da obra.</li>
+                    <li><strong>Endereço:</strong> (Opcional) Informe o endereço da obra.</li>
+                    <li><strong>Regime Tributário:</strong> (Aparece apenas para Pessoa Jurídica) Selecione o regime tributário aplicável.</li>
+                </ul>
+                <h3>7.3 Funcionalidades</h3>
+                <ul>
+                    <li>Validação automática dos campos obrigatórios e regras de negócio.</li>
+                    <li>Após o envio, o sistema calcula o INSS automaticamente e redireciona para o relatório da simulação.</li>
+                    <li>É possível duplicar uma simulação existente, o que pré-preenche os campos do formulário para facilitar a criação de simulações semelhantes.</li>
+                </ul>
+            </section>
+			
+            <section id="planejamento-tributario-detalhado">
+                <h2>8. Planejamento Tributário</h2>
+                
+                <h3>8.1 Visão Geral</h3>
+                <p>O Planejamento Tributário é uma funcionalidade avançada que permite analisar diferentes cenários de pagamento do INSS, considerando fatores como multas, juros e parcelamento, conforme a legislação vigente.</p>
+
+                <h3>8.2 Critérios de Avaliação</h3>
+                <ul>
+                    <li><strong>Fator de Ajuste:</strong> Percentual aplicado sobre o valor original do INSS para simular descontos ou condições especiais.</li>
+                    <li><strong>Pessoa Física/Jurídica:</strong> O cálculo considera o tipo de responsável pela obra, aplicando regras específicas para cada caso.</li>
+                    <li><strong>Área da Obra:</strong> Considera a área construída informada na simulação.</li>
+                    <li><strong>Data de Referência:</strong> Utiliza a data da simulação para aplicar o VAU e regras vigentes.</li>
+                    <li><strong>VAU:</strong> Valor atualizado conforme tabelas oficiais para o período da simulação.</li>
+                </ul>
+
+                <h3>8.3 Cálculo de Multas, Juros e Correção Monetária</h3>
+                <ul>
+                    <li><strong>Multa por Atraso:</strong> Percentual aplicado sobre o valor devido, conforme legislação (ex: 20% após 30 dias de atraso).</li>
+                    <li><strong>Juros de Mora:</strong> Calculados mensalmente sobre o valor devido, conforme taxa vigente (ex: 1% ao mês ou fração).</li>
+                    <li><strong>Correção Monetária:</strong> Utiliza a taxa SELIC acumulada do período entre o vencimento e o pagamento.</li>
+                </ul>
+
+                <h3>8.4 Dicas de Uso</h3>
+                <ul>
+                    <li><strong>Compare diferentes fatores de ajuste</strong> para avaliar o impacto de descontos ou condições especiais.</li>
+                    <li><strong>Considere o prazo de pagamento</strong> para entender o impacto de multas e juros.</li>
+                    <li><strong>Documente suas análises</strong> para manter o histórico de decisões.</li>
+                    <li><strong>Consulte um especialista</strong> em casos complexos ou dúvidas sobre a legislação.</li>
+                </ul>
+
+                <h3>8.5 Limitações</h3>
+                <ul>
+                    <li>Os valores apresentados são simulações e não garantias legais.</li>
+                    <li>A legislação pode ser alterada, afetando os cálculos.</li>
+                    <li>O usuário é responsável por validar as informações antes de tomar decisões.</li>
+                </ul>
+
+                <h3>8.1 Preenchendo os Dados do Planejamento Tributário</h3>
+                <p>Ao acessar o módulo de Planejamento Tributário, os seguintes dados da simulação selecionada já estarão exibidos automaticamente e não podem ser alterados nesta tela:</p>
+                <ul>
+                    <li><strong>Nome da Simulação</strong></li>
+                    <li><strong>Responsável</strong> (Pessoa Física)</li>
+                    <li><strong>Destinação</strong></li>
+                    <li><strong>UF</strong></li>
+                    <li><strong>Tipo de Obra</strong></li>
+                    <li><strong>Área (m²)</strong></li>
+                    <li><strong>RMT Base</strong> (Remuneração da Mão de Obra Total, calculada automaticamente)</li>
+                    <li><strong>INSS Original</strong> (calculado automaticamente)</li>
+                </ul>
+                <p>O usuário deve preencher ou ajustar os seguintes campos para realizar o planejamento tributário detalhado:</p>
+                <ul>
+                    <li><strong>Período da Obra:</strong> Informe o mês/ano de início e o mês/ano de término da obra utilizando os campos de data.</li>
+                    <li><strong>Honorários:</strong> Informe o valor dos honorários. Por padrão, o campo aceita valores em reais (R$). Se preferir informar um percentual (%), clique no botão ao lado do campo para alternar entre R$ e %. O sistema irá considerar o valor conforme a opção selecionada no momento do cálculo.</li>
+                </ul>
+                <p>Após preencher os campos acima, clique em <button class="btn btn-calculate"><i class="fas fa-cogs"></i> Calcular</button> para gerar o planejamento detalhado.</p>
+                <p><strong>Exemplo da tela de preenchimento dos dados iniciais:</strong></p>
+                <img src="public/assets/print-tela-planejamento-tributario-dados-iniciais.webp" alt="Tela de preenchimento dos dados iniciais do Planejamento Tributário" class="manual-img">
+            </section>
+
+            <section id="integracao-esocial-sero">
+                <h2>9. Integração com eSocial e SERO</h2>
+                
+                <h3>9.1 Visão Geral</h3>
+                <p>O sistema gera relatórios compatíveis com os padrões exigidos pelo eSocial e SERO (Sistema Eletrônico de Recursos da Ordem), MAS NÃO SUBSTITUE O SISTEMA OFICIAL, 
+                    APENAS facilita o entendimento dos processos de parcelamento e recursos.</p>
+
+                <h3>9.2 Padrões Documentais</h3>
+                
+                <h4>Relatórios em PDF:</h4>
+                <ul>
+                    <li><strong>Formato:</strong> PDF/A (padrão para arquivamento)</li>
+                    <li><strong>Estrutura:</strong> Cabeçalho, dados da obra, cálculos, assinatura</li>
+                    <li><strong>Informações:</strong> Dados completos da simulação e cálculos</li>
+                    <li><strong>Validação:</strong> Inclui data/hora de geração e identificação</li>
+                </ul>
+
+                <h4>Dados Obrigatórios:</h4>
+                <ul>
+                    <li><strong>Identificação da Obra:</strong> Nome, localização, área</li>
+                    <li><strong>Responsável:</strong> Dados do contratante</li>
+                    <li><strong>Cálculos:</strong> VAU, área equivalente, RMT, INSS</li>
+                    <li><strong>Base Legal:</strong> Referência à legislação aplicável</li>
+                    <li><strong>Data de Referência:</strong> Período de vigência</li>
+                </ul>
+
+                <h3>9.3 Compatibilidade com SERO</h3>
+                
+                <h4>Para Parcelamentos:</h4>
+                <ul>
+                    <li><strong>Documentação:</strong> Relatórios aceitos como comprovação</li>
+                    <li><strong>Valores:</strong> Cálculos precisos para definição de parcelas</li>
+                    <li><strong>Prazo:</strong> Base para definição de cronograma</li>
+                    <li><strong>Justificativa:</strong> Fundamentação técnica dos valores</li>
+                </ul>
+
+                <h4>Para Recursos:</h4>
+                <ul>
+                    <li><strong>Fundamentação:</strong> Base técnica para contestação</li>
+                    <li><strong>Comparação:</strong> Valores calculados vs. autuados</li>
+                    <li><strong>Legislação:</strong> Referência às normas aplicáveis</li>
+                    <li><strong>Metodologia:</strong> Explicação dos cálculos realizados</li>
+                </ul>
+
+                <h3>9.4 Compatibilidade com eSocial</h3>
+                
+                <h4>Informações de Obra:</h4>
+                <ul>
+                    <li><strong>Dados Básicos:</strong> Compatíveis com cadastro de obras</li>
+                    <li><strong>Classificação:</strong> Destinação e tipo de obra padronizados</li>
+                    <li><strong>Localização:</strong> UF e município conforme padrão</li>
+                    <li><strong>Responsável:</strong> Dados do contratante da obra</li>
+                </ul>
+
+                <h4>Valores de Referência:</h4>
+                <ul>
+                    <li><strong>VAU:</strong> Valores atualizados conforme tabelas oficiais</li>
+                    <li><strong>Área Equivalente:</strong> Cálculo conforme IN 2.021/2021</li>
+                    <li><strong>RMT:</strong> Remuneração da mão de obra total</li>
+                    <li><strong>INSS:</strong> Valor final do tributo</li>
+                </ul>
+
+                <h3>9.5 Referências Legais Atualizadas</h3>
+                
+                <h4>Legislação Principal:</h4>
+                <ul>
+                    <li><strong>Lei 8.212/91:</strong> Lei Orgânica da Seguridade Social</li>
+                    <li><strong>Lei 8.213/91:</strong> Lei dos Benefícios da Previdência Social</li>
+                    <li><strong>IN RFB 971/2009:</strong> Instrução Normativa sobre INSS de obras</li>
+                    <li><strong>IN RFB 2.021/2021:</strong> Nova metodologia de cálculo</li>
+                </ul>
+
+                <h4>Atos Declaratórios:</h4>
+                <ul>
+                    <li><strong>ADIN 2.021:</strong> Sobre aplicação da nova metodologia</li>
+                    <li><strong>ADIN SELIC:</strong> Correção monetária em débitos previdenciários</li>
+                    <li><strong>ADIN Parcelamento:</strong> Regras para parcelamento de débitos</li>
+                </ul>
+
+                <h4>Decretos e Portarias:</h4>
+                <ul>
+                    <li><strong>Decreto 6.214/2007:</strong> Regulamentação do eSocial</li>
+                    <li><strong>Portaria 1.781/2017:</strong> Procedimentos do SERO</li>
+                    <li><strong>Resoluções:</strong> Atualizações de valores e procedimentos</li>
+                </ul>
+
+                <h3>9.6 Bases Legais dos Cálculos</h3>
+                
+                <h4>IN RFB 2.021/2021 - Art. 26:</h4>
+                <ul>
+                    <li><strong>Área Equivalente:</strong> Aplicação de percentuais por destinação</li>
+                    <li><strong>Fator Social:</strong> Apenas para pessoa física (20% a 90%)</li>
+                    <li><strong>Fator de Obra:</strong> 20% (alvenaria) ou 15% (madeira/mista)</li>
+                    <li><strong>Alíquotas:</strong> 36,8% (PF) ou conforme regime (PJ)</li>
+                </ul>
+
+                <h4>Lei 8.212/91 - Art. 33:</h4>
+                <ul>
+                    <li><strong>Multa:</strong> 20% por atraso no pagamento</li>
+                    <li><strong>Juros:</strong> 1% ao mês ou fração</li>
+                    <li><strong>Correção:</strong> SELIC acumulada</li>
+                </ul>
+
+                <h3>9.7 Dicas para Documentação</h3>
+                
+                <h4>Ao Gerar Relatórios:</h4>
+                <ul>
+                    <li><strong>Verifique Dados:</strong> Confirme todas as informações</li>
+                    <li><strong>Mantenha Histórico:</strong> Guarde versões dos relatórios</li>
+                    <li><strong>Documente Contexto:</strong> Anote situações especiais</li>
+                    <li><strong>Atualize Regularmente:</strong> Revise conforme mudanças legais</li>
+                </ul>
+
+                <h4>Para Processos:</h4>
+                <ul>
+                    <li><strong>Use Relatórios Atualizados:</strong> Sempre a versão mais recente</li>
+                    <li><strong>Inclua Fundamentação:</strong> Cite a legislação aplicável</li>
+                    <li><strong>Mantenha Rastreabilidade:</strong> Documente fontes dos dados</li>
+                    <li><strong>Consulte Especialistas:</strong> Para casos complexos</li>
+                </ul>
+
+                <h3>9.8 Limitações e Observações</h3>
+                
+                <h4>Importante Saber:</h4>
+                <ul>
+                    <li><strong>Simulação:</strong> Os valores são estimativas, não garantias</li>
+                    <li><strong>Legislação:</strong> Pode ser alterada, afetando cálculos</li>
+                    <li><strong>Responsabilidade:</strong> Usuário deve validar informações</li>
+                    <li><strong>Especialização:</strong> Casos complexos requerem análise técnica</li>
+                </ul>
+
+                <h4>Atualizações:</h4>
+                <ul>
+                    <li><strong>VAU:</strong> Atualizado conforme tabelas oficiais</li>
+                    <li><strong>SELIC:</strong> Importado do Banco Central</li>
+                    <li><strong>Legislação:</strong> Monitorada para mudanças</li>
+                    <li><strong>Sistema:</strong> Atualizado conforme necessário</li>
+                </ul>
+            </section>
+
+            <section id="administracao">
+                <h2>10. Administração</h2>
+                <h3>10.1 Visão Geral</h3>
+                <p>O painel administrativo é acessível apenas para usuários com perfil de administrador e permite o gerenciamento completo do sistema.</p>
+                <h3>10.2 Funcionalidades do Painel Administrativo</h3>
+                <ul>
+                    <li><strong>Cards de Resumo:</strong> Exibe total de simulações, total de usuários ativos, valor total de INSS e novas simulações nos últimos 7 dias.</li>
+                    <li><strong>Gráficos e Estatísticas:</strong> Visualize novos usuários e simulações por mês, top 5 UFs, distribuição por faixa de área e por destinação.</li>
+                    <li><strong>Gerenciamento de Usuários:</strong> Listar, ativar/desativar, promover/demitir administradores, excluir usuários.</li>
+                    <li><strong>Gerenciamento de Simulações:</strong> Listar, buscar e excluir simulações de qualquer usuário.</li>
+                    <li><strong>Acesso à Tabela VAU e Tabela SELIC:</strong> Gerencie os valores de referência utilizados nos cálculos.</li>
+                    <li><strong>Configurações do Sistema:</strong> Personalize informações institucionais, contatos, redes sociais e preferências do sistema.</li>
+                    <li><strong>Retorno ao Dashboard:</strong> Acesse rapidamente o dashboard principal do sistema.</li>
+                </ul>
+            </section>
+            <section id="configuracoes-sistema-detalhado">
+                <h2>11. Configurações do Sistema</h2>
+                
+                <h3>11.1 Visão Geral</h3>
+                <p>A tela de Configurações do Sistema permite personalizar informações institucionais, dados de contato e redes sociais que aparecem em relatórios e no sistema.</p>
+                       <p><strong>Exemplo da tela de Configurações do Sistema:</strong></p>
+       <img src="public/assets/tela-configuracoes-sistema.jpg" alt="Tela de Configurações do Sistema" class="manual-img">
+
+                <h3>11.2 Informações da Empresa</h3>
+                
+                <h4>Nome da Empresa:</h4>
+                <ul>
+                    <li><strong>Função:</strong> Nome que aparece nos relatórios e cabeçalhos</li>
+                    <li><strong>Formato:</strong> Texto livre</li>
+                    <li><strong>Exemplo:</strong> "Calculadora INSS Obra Legal ®"</li>
+                    <li><strong>Impacto:</strong> Aparece em PDFs e tela de login</li>
+                </ul>
+
+                <h4>Website:</h4>
+                <ul>
+                    <li><strong>Função:</strong> URL do site da empresa</li>
+                    <li><strong>Formato:</strong> URL válida (ex: https://www.empresa.com.br)</li>
+                    <li><strong>Uso:</strong> Links em relatórios e rodapés</li>
+                    <li><strong>Opcional:</strong> Pode ficar em branco</li>
+                </ul>
+
+                <h3>11.3 Informações de Contato</h3>
+                
+                <h4>E-mail de Contato:</h4>
+                <ul>
+                    <li><strong>Função:</strong> E-mail principal para contato</li>
+                    <li><strong>Formato:</strong> E-mail válido</li>
+                    <li><strong>Uso:</strong> Aparece em relatórios e páginas de suporte</li>
+                    <li><strong>Exemplo:</strong> contato@empresa.com.br</li>
+                </ul>
+
+                <h4>Telefone:</h4>
+                <ul>
+                    <li><strong>Função:</strong> Número de telefone para contato</li>
+                    <li><strong>Formato:</strong> Texto livre (aceita formatação)</li>
+                    <li><strong>Exemplo:</strong> (11) 99999-9999</li>
+                    <li><strong>Uso:</strong> Relatórios e páginas de contato</li>
+                </ul>
+
+                <h4>Endereço:</h4>
+                <ul>
+                    <li><strong>Função:</strong> Endereço físico da empresa</li>
+                    <li><strong>Formato:</strong> Texto livre (múltiplas linhas)</li>
+                    <li><strong>Uso:</strong> Relatórios e documentação</li>
+                    <li><strong>Exemplo:</strong> Rua das Flores, 123 - Centro - São Paulo/SP</li>
+                </ul>
+
+                <h3>11.4 Redes Sociais</h3>
+                
+                <h4>Facebook:</h4>
+                <ul>
+                    <li><strong>Função:</strong> Link para página do Facebook</li>
+                    <li><strong>Formato:</strong> URL completa</li>
+                    <li><strong>Exemplo:</strong> https://facebook.com/suaempresa</li>
+                </ul>
+
+                <h4>Instagram:</h4>
+                <ul>
+                    <li><strong>Função:</strong> Link para perfil do Instagram</li>
+                    <li><strong>Formato:</strong> URL completa</li>
+                    <li><strong>Exemplo:</strong> https://instagram.com/suaempresa</li>
+                </ul>
+
+                <h4>LinkedIn:</h4>
+                <ul>
+                    <li><strong>Função:</strong> Link para página do LinkedIn</li>
+                    <li><strong>Formato:</strong> URL completa</li>
+                    <li><strong>Exemplo:</strong> https://linkedin.com/company/suaempresa</li>
+                </ul>
+
+                <h4>Twitter/X:</h4>
+                <ul>
+                    <li><strong>Função:</strong> Link para perfil do Twitter/X</li>
+                    <li><strong>Formato:</strong> URL completa</li>
+                    <li><strong>Exemplo:</strong> https://twitter.com/suaempresa</li>
+                </ul>
+
+                <h4>YouTube:</h4>
+                <ul>
+                    <li><strong>Função:</strong> Link para canal do YouTube</li>
+                    <li><strong>Formato:</strong> URL completa</li>
+                    <li><strong>Exemplo:</strong> https://youtube.com/@suaempresa</li>
+                </ul>
+
+                <h3>11.5 Como Salvar Configurações</h3>
+                
+                <h4>Processo de Salvamento:</h4>
+                <ol>
+                    <li>Preencha os campos desejados</li>
+                    <li>Clique em <strong>"Salvar Todas"</strong></li>
+                    <li>Aguarde a confirmação de salvamento</li>
+                    <li>As alterações são aplicadas imediatamente</li>
+                </ol>
+
+                <h4>Validação:</h4>
+                <ul>
+                    <li><strong>E-mails:</strong> Devem ter formato válido</li>
+                    <li><strong>URLs:</strong> Devem começar com http:// ou https://</li>
+                    <li><strong>Campos obrigatórios:</strong> Nome da empresa</li>
+                </ul>
+
+                <h3>11.6 Impacto das Configurações</h3>
+                
+                <h4>Onde Aparecem:</h4>
+                <ul>
+                    <li><strong>Relatórios PDF:</strong> Cabeçalho e rodapé</li>
+                    <li><strong>Tela de Login:</strong> Nome da empresa</li>
+                    <li><strong>Páginas do Sistema:</strong> Informações de contato</li>
+                    <li><strong>E-mails:</strong> Assinatura automática</li>
+                </ul>
+
+                <h4>Dicas de Uso:</h4>
+                <ul>
+                    <li><strong>Mantenha Atualizado:</strong> Revise periodicamente</li>
+                    <li><strong>Verifique Links:</strong> Teste URLs das redes sociais</li>
+                    <li><strong>Use Informações Reais:</strong> Evite dados fictícios</li>
+                    <li><strong>Padronize Formato:</strong> Mantenha consistência</li>
+                </ul>
+            </section>
+
+            <section id="temas-visual-detalhado">
+                <h2>12. Temas e Visual</h2>
+                
+                <h3>12.1 Visão Geral</h3>
+                <p>A tela de Temas e Visual permite personalizar completamente a aparência do sistema, incluindo cores, fontes, logos e layout.</p>
+                       <p><strong>Exemplo da tela de Temas e Visual:</strong></p>
+       <img src="public/assets/tela-temas-visual.jpg" alt="Tela de Temas e Visual" class="manual-img">
+
+                <h3>12.2 Logo e Favicon</h3>
+                
+                <h4>Logo Principal (300px):</h4>
+                <ul>
+                    <li><strong>Função:</strong> Logo que aparece no cabeçalho do sistema</li>
+                    <li><strong>Formato:</strong> PNG</li>
+                    <li><strong>Tamanho:</strong> 300px de largura (altura proporcional)</li>
+                    <li><strong>Uso:</strong> Sidebar, cabeçalhos e relatórios</li>
+                    <li><strong>Dica:</strong> Use fundo transparente para melhor resultado</li>
+                </ul>
+
+                <h4>Favicon (64x64px):</h4>
+                <ul>
+                    <li><strong>Função:</strong> Ícone que aparece na aba do navegador</li>
+                    <li><strong>Formato:</strong> PNG</li>
+                    <li><strong>Tamanho:</strong> 64x64 pixels</li>
+                    <li><strong>Uso:</strong> Identificação visual do sistema</li>
+                </ul>
+
+                <h4>Logo para Relatórios (500-600px):</h4>
+                <ul>
+                    <li><strong>Função:</strong> Logo de alta qualidade para PDFs</li>
+                    <li><strong>Formato:</strong> PNG</li>
+                    <li><strong>Tamanho:</strong> 500-600px de largura</li>
+                    <li><strong>Uso:</strong> Relatórios em PDF</li>
+                    <li><strong>Dica:</strong> Use alta resolução para impressão</li>
+                </ul>
+
+                <h3>12.3 Paleta de Cores</h3>
+                
+                <h4>Cor Primária:</h4>
+                <ul>
+                    <li><strong>Função:</strong> Cor principal do sistema</li>
+                    <li><strong>Impacto:</strong> Botões, cabeçalhos, links</li>
+                    <li><strong>Padrão:</strong> #2c5aa0 (azul)</li>
+                    <li><strong>Dica:</strong> Escolha uma cor que represente sua marca</li>
+                </ul>
+
+                <h4>Texto das Barras de Título:</h4>
+                <ul>
+                    <li><strong>Função:</strong> Cor do texto nos cabeçalhos dos cards</li>
+                    <li><strong>Impacto:</strong> Títulos de seções e cards</li>
+                    <li><strong>Padrão:</strong> #ffffff (branco)</li>
+                    <li><strong>Dica:</strong> Deve contrastar com a cor primária</li>
+                </ul>
+
+                <h4>Cores de Status:</h4>
+                <ul>
+                    <li><strong>Sucesso:</strong> Verde (#28a745) - operações bem-sucedidas</li>
+                    <li><strong>Aviso:</strong> Amarelo (#ffc107) - alertas e avisos</li>
+                    <li><strong>Perigo:</strong> Vermelho (#dc3545) - erros e exclusões</li>
+                    <li><strong>Informação:</strong> Azul claro (#17a2b8) - mensagens informativas</li>
+                </ul>
+
+                <h4>Sidebar:</h4>
+                <ul>
+                    <li><strong>Função:</strong> Cor de fundo do menu lateral</li>
+                    <li><strong>Padrão:</strong> #212529 (cinza escuro)</li>
+                    <li><strong>Dica:</strong> Use cor escura para melhor contraste</li>
+                </ul>
+
+                <h3>12.4 Tipografia</h3>
+                
+                <h4>Família da Fonte:</h4>
+                <ul>
+                    <li><strong>Inter (Recomendado):</strong> Fonte moderna e legível</li>
+                    <li><strong>Segoe UI:</strong> Fonte padrão do Windows</li>
+                    <li><strong>Roboto:</strong> Fonte do Google, muito legível</li>
+                    <li><strong>Open Sans:</strong> Fonte aberta, boa para web</li>
+                </ul>
+
+                <h4>Tamanho Base da Fonte:</h4>
+                <ul>
+                    <li><strong>Controle:</strong> Slider de 12px a 20px</li>
+                    <li><strong>Padrão:</strong> 16px</li>
+                    <li><strong>Impacto:</strong> Tamanho base de todo o texto</li>
+                    <li><strong>Dica:</strong> 16px é ideal para leitura na tela</li>
+                </ul>
+
+                <h3>12.5 Configurações de Layout</h3>
+                
+                <h4>Raio das Bordas:</h4>
+                <ul>
+                    <li><strong>Controle:</strong> Slider de 0px a 20px</li>
+                    <li><strong>Padrão:</strong> 6px</li>
+                    <li><strong>Impacto:</strong> Arredondamento de cards e botões</li>
+                    <li><strong>Dica:</strong> Valores maiores criam visual mais suave</li>
+                </ul>
+
+                <h4>Espaçamento:</h4>
+                <ul>
+                    <li><strong>Controle:</strong> Slider de 0.5rem a 2rem</li>
+                    <li><strong>Padrão:</strong> 1rem</li>
+                    <li><strong>Impacto:</strong> Espaçamento interno dos elementos</li>
+                    <li><strong>Dica:</strong> Mais espaço cria visual mais arejado</li>
+                </ul>
+
+                <h4>Sombras:</h4>
+                <ul>
+                    <li><strong>Controle:</strong> Slider de 0 a 2 (Suave a Forte)</li>
+                    <li><strong>Padrão:</strong> Normal</li>
+                    <li><strong>Impacto:</strong> Profundidade dos elementos</li>
+                    <li><strong>Dica:</strong> Sombras suaves criam elegância</li>
+                </ul>
+
+                <h3>12.6 Posição da Sidebar</h3>
+                
+                <h4>Esquerda (Padrão):</h4>
+                <ul>
+                    <li><strong>Layout:</strong> Menu lateral à esquerda</li>
+                    <li><strong>Vantagem:</strong> Padrão web, familiar aos usuários</li>
+                    <li><strong>Ideal para:</strong> Maioria dos casos</li>
+                </ul>
+
+                <h4>Direita:</h4>
+                <ul>
+                    <li><strong>Layout:</strong> Menu lateral à direita</li>
+                    <li><strong>Vantagem:</strong> Diferencial visual</li>
+                    <li><strong>Ideal para:</strong> Sistemas específicos ou preferência</li>
+                </ul>
+
+                <h3>12.7 Preview em Tempo Real</h3>
+                
+                <h4>Funcionalidades:</h4>
+                <ul>
+                    <li><strong>Atualização Instantânea:</strong> Mudanças aparecem imediatamente</li>
+                    <li><strong>Exemplo de Card:</strong> Mostra cores, bordas e sombras</li>
+                    <li><strong>Botões de Exemplo:</strong> Todas as cores de status</li>
+                    <li><strong>Alertas:</strong> Mensagens de exemplo</li>
+                </ul>
+
+                <h4>Como Usar:</h4>
+                <ul>
+                    <li>Ajuste as cores e veja o resultado no preview</li>
+                    <li>Teste diferentes fontes e tamanhos</li>
+                    <li>Experimente com raio de borda e sombras</li>
+                    <li>Compare antes e depois das mudanças</li>
+                </ul>
+
+                <h3>12.8 Ações Disponíveis</h3>
+                
+                <h4>Resetar:</h4>
+                <ul>
+                    <li><strong>Função:</strong> Volta às configurações da sessão atual</li>
+                    <li><strong>Uso:</strong> Quando quer desfazer mudanças não salvas</li>
+                    <li><strong>Impacto:</strong> Não salva no sistema</li>
+                </ul>
+
+                <h4>Restaurar Padrão:</h4>
+                <ul>
+                    <li><strong>Função:</strong> Volta às configurações originais do sistema</li>
+                    <li><strong>Uso:</strong> Quando quer começar do zero</li>
+                    <li><strong>Impacto:</strong> Remove todas as personalizações</li>
+                    <li><strong>Atenção:</strong> Ação irreversível</li>
+                </ul>
+
+                <h4>Preview:</h4>
+                <ul>
+                    <li><strong>Função:</strong> Abre nova aba com preview completo</li>
+                    <li><strong>Uso:</strong> Para ver como ficará em tela cheia</li>
+                    <li><strong>Vantagem:</strong> Visualização mais ampla</li>
+                </ul>
+
+                <h4>Salvar:</h4>
+                <ul>
+                    <li><strong>Função:</strong> Salva todas as configurações</li>
+                    <li><strong>Uso:</strong> Após finalizar as personalizações</li>
+                    <li><strong>Impacto:</strong> Aplicado imediatamente em todo o sistema</li>
+                </ul>
+
+                <h3>12.9 Dicas de Personalização</h3>
+                
+                <h4>Para Melhor Resultado:</h4>
+                <ul>
+                    <li><strong>Mantenha Consistência:</strong> Use cores que combinem</li>
+                    <li><strong>Teste Contrastes:</strong> Garanta legibilidade</li>
+                    <li><strong>Use Logos de Qualidade:</strong> Evite imagens pixeladas</li>
+                    <li><strong>Considere a Marca:</strong> Alinhe com identidade visual</li>
+                </ul>
+
+                <h4>Combinações Recomendadas:</h4>
+                <ul>
+                    <li><strong>Profissional:</strong> Azul (#2c5aa0) + Cinza (#6c757d)</li>
+                    <li><strong>Moderno:</strong> Verde (#28a745) + Branco (#ffffff)</li>
+                    <li><strong>Elegante:</strong> Roxo (#6f42c1) + Dourado (#ffc107)</li>
+                    <li><strong>Corporativo:</strong> Azul escuro (#1e3a5f) + Cinza claro (#f8f9fa)</li>
+                </ul>
+
+                <h4>Limitações:</h4>
+                <ul>
+                    <li><strong>Apenas Administradores:</strong> Acesso restrito</li>
+                    <li><strong>Alterações Globais:</strong> Afetam todos os usuários</li>
+                    <li><strong>Compatibilidade:</strong> Teste em diferentes navegadores</li>
+                    <li><strong>Performance:</strong> Muitas cores podem afetar velocidade</li>
+                </ul>
+            </section>
+
+            <section id="selic">
+                <h2>13. SELIC</h2>
+                <h3>13.1 Visão Geral</h3>
+                <p>A tela de administração da SELIC permite que administradores importem, cadastrem, editem e excluam os valores mensais da taxa SELIC acumulada, utilizada nos cálculos de correção monetária do sistema.</p>
+                <p><strong>Importante:</strong> A tabela SELIC acumulada deve ser baixada do site oficial da Receita Federal: <a href="https://sicalc.receita.economia.gov.br/sicalc/selic/consulta" target="_blank">https://sicalc.receita.economia.gov.br/sicalc/selic/consulta</a></p>
+                <h3>13.2 Funcionalidades</h3>
+                <ul>
+                    <li><strong>Importação de Dados:</strong> Importe a tabela SELIC colando dados no formato texto ou via arquivo CSV. O sistema aceita formatos horizontal (anos na primeira linha, meses nas linhas seguintes) e vertical (blocos de ano + 12 valores).</li>
+                    <li><strong>Gestão Manual:</strong> Adicione, edite ou exclua registros de SELIC mensal informando mês, ano e valor acumulado. A edição é feita clicando no botão de lápis ao lado do registro desejado.</li>
+                    <li><strong>Filtro por Ano:</strong> Filtre a listagem para exibir apenas um ano específico ou os últimos 12 meses.</li>
+                    <li><strong>Listagem:</strong> Visualize todos os registros cadastrados em uma tabela com colunas: Mês, Ano, SELIC Acumulada e Ações (editar/excluir).</li>
+                    <li><strong>Navegação:</strong> Acesse rapidamente o Dashboard Admin, Importação, Gestão Manual, Listagem e volte ao Dashboard principal.</li>
+                </ul>
+                <h3>13.3 Exemplo da Tela SELIC</h3>
+                <img src="public/assets/print-tela-selic.webp" alt="Tela de administração da SELIC" class="manual-img">
+            </section>
+
+            <section id="relatorios">
+                <h2>14. Relatórios</h2>
+                
+                <h3>14.1 Visão Geral</h3>
+                <p>O sistema permite gerar relatórios detalhados de simulações, incluindo dados de INSS, multas, juros e parcelamentos.</p>
+                       <p><strong>Exemplo da tela de Relatórios:</strong></p>
+       <img src="public/assets/tela-relatorios.jpg" alt="Tela de Relatórios" class="manual-img">
+
+                <h3>14.2 Tipos de Relatórios</h3>
+                
+                <h4>Relatório de Simulação:</h4>
+                <ul>
+                    <li><strong>Dados:</strong> Todos os dados da simulação (INSS, multas, juros, parcelas)</li>
+                    <li><strong>Formato:</strong> PDF/A (padrão para arquivamento)</li>
+                    <li><strong>Uso:</strong> Documentação oficial de cálculo</li>
+                </ul>
+
+                <h4>Relatório de Planejamento:</h4>
+                <ul>
+                    <li><strong>Dados:</strong> Cenários de pagamento (à vista, parcelado, com atraso)</li>
+                    <li><strong>Formato:</strong> PDF/A</li>
+                    <li><strong>Uso:</strong> Análise de custos</li>
+                </ul>
+
+                <h4>Relatório de Integração:</h4>
+                <ul>
+                    <li><strong>Dados:</strong> Informações de INSS, VAU, RMT, etc.</li>
+                    <li><strong>Formato:</strong> PDF/A</li>
+                    <li><strong>Uso:</strong> Documentação de integração</li>
+                </ul>
+
+                <h3>14.3 Como Gerar Relatórios</h3>
+                
+                <h4>Passo a Passo:</h4>
+                <ol>
+                    <li>Acesse a simulação desejada</li>
+                    <li>Clique em <strong>"Gerar PDF"</strong> ou <strong>"Exportar"</strong> no menu lateral</li>
+                    <li>Escolha o formato (PDF/A ou CSV)</li>
+                    <li>Aguarde o download do arquivo</li>
+                </ol>
+
+                <h3>14.4 Personalização de Relatórios</h3>
+                
+                <h4>Opções de Formato:</h4>
+                <ul>
+                    <li><strong>PDF/A:</strong> Padrão para arquivamento, maior segurança</li>
+                    <li><strong>PDF/U:</strong> Padrão para web, mais leve</li>
+                    <li><strong>CSV:</strong> Dados tabulares, fácil de importar</li>
+                </ul>
+
+                <h4>Opções de Conteúdo:</h4>
+                <ul>
+                    <li><strong>Todos os Dados:</strong> Inclui INSS, multas, juros, parcelas</li>
+                    <li><strong>Dados Detalhados:</strong> Mostra cálculos passo a passo</li>
+                    <li><strong>Apenas Resumo:</strong> Apenas valores finais</li>
+                </ul>
+
+                <h4>Opções de Layout:</h4>
+                <ul>
+                    <li><strong>Padrão:</strong> Layout tradicional</li>
+                    <li><strong>Compacto:</strong> Menos espaço, mais informações</li>
+                    <li><strong>Personalizado:</strong> Pode ser definido nas configurações</li>
+                </ul>
+
+                <h3>14.5 Dicas de Uso</h3>
+                
+                <h4>Para Melhor Organização:</h4>
+                <ul>
+                    <li><strong>Nomeie os Relatórios:</strong> Identifique claramente o conteúdo</li>
+                    <li><strong>Armazene em Pastas:</strong> Mantenha organizado</li>
+                    <li><strong>Mantenha Histórico:</strong> Guarde versões anteriores</li>
+                </ul>
+
+                <h4>Limitações:</h4>
+                <ul>
+                    <li><strong>Apenas Administradores:</strong> Acesso restrito</li>
+                    <li><strong>Tamanho do Arquivo:</strong> Relatórios grandes podem ser pesados</li>
+                    <li><strong>Compatibilidade:</strong> Teste em diferentes navegadores</li>
+                </ul>
+            </section>
+
+            <section id="perfil">
+                <h2>15. Perfil do Usuário</h2>
+                
+                <h3>15.1 Visão Geral</h3>
+                <p>A tela de Perfil do Usuário permite que você edite suas informações pessoais e de acesso.</p>
+                       <p><strong>Exemplo da tela de Perfil do Usuário:</strong></p>
+       <img src="public/assets/tela-perfil-usuario.png" alt="Tela de Perfil do Usuário" class="manual-img">
+
+                <h3>15.2 Informações Pessoais</h3>
+                
+                <h4>Nome:</h4>
+                <ul>
+                    <li><strong>Função:</strong> Nome completo do usuário</li>
+                    <li><strong>Formato:</strong> Texto livre</li>
+                    <li><strong>Exemplo:</strong> João Silva</li>
+                    <li><strong>Impacto:</strong> Aparece em relatórios e no menu</li>
+                </ul>
+
+                <h4>E-mail:</h4>
+                <ul>
+                    <li><strong>Função:</strong> Endereço de e-mail para contato e recuperação de senha</li>
+                    <li><strong>Formato:</strong> E-mail válido</li>
+                    <li><strong>Exemplo:</strong> joao.silva@empresa.com.br</li>
+                    <li><strong>Impacto:</strong> Uso obrigatório para login</li>
+                </ul>
+
+                <h4>Senha:</h4>
+                <ul>
+                    <li><strong>Função:</strong> Segurança da conta</li>
+                    <li><strong>Formato:</strong> Mínimo 8 caracteres, combinação de letras, números e símbolos</li>
+                    <li><strong>Exemplo:</strong> J@n3Silva123</li>
+                    <li><strong>Impacto:</strong> Proteção da conta</li>
+                </ul>
+
+                <h3>15.3 Como Editar Perfil</h3>
+                
+                <h4>Passo a Passo:</h4>
+                <ol>
+                    <li>Clique em <strong>"Perfil"</strong> no menu lateral</li>
+                    <li>Preencha os campos desejados</li>
+                    <li>Clique em <strong>"Salvar Alterações"</strong></li>
+                    <li>Aguarde a confirmação de salvamento</li>
+                </ol>
+
+                <h3>15.4 Dicas de Segurança</h3>
+                
+                <h4>Para Proteger sua Conta:</h4>
+                <ul>
+                    <li><strong>Senha Forte:</strong> Use combinações de caracteres</li>
+                    <li><strong>Altere Regularmente:</strong> Sempre que possível</li>
+                    <li><strong>Não Compartilhe:</strong> Mantenha sua senha em sigilo</li>
+                </ul>
+
+                <h4>Limitações:</h4>
+                <ul>
+                    <li><strong>Apenas Administradores:</strong> Acesso restrito</li>
+                    <li><strong>Compatibilidade:</strong> Teste em diferentes navegadores</li>
+                </ul>
+            </section>
+
+            <section id="problemas">
+                <h2>16. Resolução de Problemas</h2>
+                
+                <h3>16.1 Visão Geral</h3>
+                <p>Aqui estão algumas soluções comuns para problemas que você pode encontrar.</p>
+
+                <h3>16.2 Problemas de Acesso</h3>
+                
+                <h4>Login:</h4>
+                <ul>
+                    <li><strong>Verifique suas credenciais:</strong> E-mail e senha devem estar corretos.</li>
+                    <li><strong>Use a recuperação de senha:</strong> Se esqueceu a senha, clique em "Esqueci minha senha".</li>
+                    <li><strong>Verifique a conexão:</strong> Tenha uma boa conexão com a internet.</li>
+                </ul>
+
+                <h4>Conta Bloqueada:</h4>
+                <ul>
+                    <li><strong>Entre em contato com o suporte:</strong> Se sua conta foi bloqueada, entre em contato com o administrador.</li>
+                    <li><strong>Verifique a data:</strong> Pode haver um limite de tempo para acesso.</li>
+                </ul>
+
+                <h3>16.3 Problemas de Simulação</h3>
+                
+                <h4>Dados Incorretos:</h4>
+                <ul>
+                    <li><strong>Valide os dados:</strong> Use a validação em tempo real e a lista de erros.</li>
+                    <li><strong>Preencha corretamente:</strong> As datas devem ser futuras ou presentes, os valores devem ser positivos.</li>
+                </ul>
+
+                <h4>Relatórios Não Geram:</h4>
+                <ul>
+                    <li><strong>Verifique a conexão:</strong> Tenha uma boa conexão com a internet.</li>
+                    <li><strong>Permita pop-ups:</strong> O navegador deve permitir pop-ups para gerar PDFs.</li>
+                    <li><strong>Tente novamente:</strong> Se o problema persistir, tente novamente mais tarde.</li>
+                </ul>
+
+                <h3>16.4 Problemas de Configurações</h3>
+                
+                <h4>Alterações Não Refletem:</h4>
+                <ul>
+                    <li><strong>Recarregue a página:</strong> Limpe o cache do navegador (F5).</li>
+                    <li><strong>Limpe o cache do navegador:</strong> No menu lateral, clique em "Configurações do Sistema" e depois em "Limpar Cache".</li>
+                </ul>
+
+                <h4>Configurações Não Salvas:</h4>
+                <ul>
+                    <li><strong>Clique em "Salvar Todas":</strong> Ao editar configurações, clique em "Salvar Todas" para confirmar.</li>
+                    <li><strong>Verifique a conexão:</strong> Tenha uma boa conexão com a internet.</li>
+                </ul>
+
+                <h3>16.5 Problemas de Integração</h3>
+                
+                <h4>Relatórios SELIC Não Importam:</h4>
+                <ul>
+                    <li><strong>Verifique o formato:</strong> Use arquivos CSV (.csv) ou Excel (.xlsx) com colunas de mês/ano e taxa.</li>
+                    <li><strong>Tamanho do Arquivo:</strong> Arquivos grandes podem demorar para importar.</li>
+                </ul>
+
+                <h4>Relatórios eSocial/SERO Não Geram:</h4>
+                <ul>
+                    <li><strong>Verifique a conexão:</strong> Tenha uma boa conexão com a internet.</li>
+                    <li><strong>Permita pop-ups:</strong> O navegador deve permitir pop-ups para gerar PDFs.</li>
+                </ul>
+            </section>
+
+            <section id="suporte">
+                <h2>17. Suporte</h2>
+                
+                <h3>17.1 Visão Geral</h3>
+                <p>Se você encontrar um problema que não está resolvido nas seções anteriores, entre em contato com o suporte.</p>
+
+                <h3>17.2 Como Contatar o Suporte</h3>
+                
+                <h4>E-mail:</h4>
+                <ul>
+                    <li><strong>Suporte:</strong> feliciano.filho@hostnet.com.br</li>
+                    <li><strong>Atendimento:</strong> 24 horas por dia, 7 dias por semana</li>
+                    <li><strong>Resposta Rápida:</strong> Garantimos uma resposta em até 24 horas úteis</li>
+                </ul>
+
+                <h4>Telefone:</h4>
+                <ul>
+                    <li><strong>Suporte WhatsApp:</strong> (85) 99768-3014</li>
+                    <li><strong>Atendimento:</strong> Exclusivo por mensagem, não atendemos ligações</li>
+                    <li><strong>Resposta Rápida:</strong> Garantimos uma resposta em até 24 horas úteis</li>
+                </ul>
+
+                <h3>17.3 Documentação</h3>
+                
+                <h4>Manual do Usuário:</h4>
+                <ul>
+                    <li><strong>Este manual:</strong> Fornece orientações detalhadas sobre todas as funcionalidades.</li>
+                    <li><strong>Atualizado Regularmente:</strong> Mantenha-se atualizado consultando este manual.</li>
+                </ul>
+
+                <h4>Política de Privacidade:</h4>
+                <ul>
+                    <li><strong>Disponível:</strong> Acesse a política de privacidade no rodapé da página.</li>
+                    <li><strong>Protege seus dados:</strong> Saiba como seus dados são tratados.</li>
+                </ul>
+
+                <h4>Termos de Uso:</h4>
+                <ul>
+                    <li><strong>Disponível:</strong> Acesse os termos de uso no rodapé da página.</li>
+                    <li><strong>Entenda os limites:</strong> Saiba quais são seus direitos e deveres.</li>
+                </ul>
+            </section>
+
+            <section id="faq">
+                <h2>18. Perguntas Frequentes (FAQ)</h2>
+                
+                <h3>18.1 Acesso e Login</h3>
+                
+                <h4>Q: Esqueci minha senha, o que faço?</h4>
+                <p>A: Use a opção "Esqueci minha senha" na tela de login. Você receberá instruções por e-mail para redefinir a senha.</p>
+
+                <h4>Q: Minha conta foi bloqueada, como desbloquear?</h4>
+                <p>A: Entre em contato com o administrador do sistema ou suporte técnico.</p>
+
+                <h4>Q: Posso acessar de qualquer dispositivo?</h4>
+                <p>A: Sim, desde que tenha conexão com a internet e um navegador moderno.</p>
+
+                <h3>18.2 Simulações</h3>
+                
+                <h4>Q: Como criar uma nova simulação?</h4>
+                <p>A: Acesse "Nova Simulação" no menu lateral e preencha os dados obrigatórios.</p>
+
+                <h4>Q: Posso editar uma simulação já criada?</h4>
+                <p>A: Sim, acesse "Minhas Simulações" e clique em "Editar" na simulação desejada.</p>
+
+                <h4>Q: Como duplicar uma simulação?</h4>
+                <p>A: Em "Minhas Simulações", clique em "Duplicar" na simulação desejada.</p>
+
+                <h4>Q: Posso excluir uma simulação?</h4>
+                <p>A: Sim, mas a exclusão é permanente. Use com cuidado.</p>
+
+                <h3>18.3 Relatórios e PDFs</h3>
+                
+                <h4>Q: Como gerar um relatório em PDF?</h4>
+                <p>A: Acesse a simulação desejada e clique em "Gerar PDF" ou "Exportar".</p>
+
+                <h4>Q: O PDF não está gerando, o que faço?</h4>
+                <p>A: Verifique se o navegador permite pop-ups e se há conexão com a internet.</p>
+
+                <h4>Q: Posso personalizar o relatório?</h4>
+                <p>A: Sim, nas configurações do sistema você pode incluir logo e personalizar textos.</p>
+
+                <h3>18.4 Temas e Visual</h3>
+                
+                <h4>Q: Como alterar as cores do sistema?</h4>
+                <p>A: Acesse "Temas e Visual" no menu e use os seletores de cor.</p>
+
+                <h4>Q: As alterações não aparecem, o que faço?</h4>
+                <p>A: Recarregue a página (F5) ou limpe o cache do navegador.</p>
+
+                <h4>Q: Posso voltar ao visual original?</h4>
+                <p>A: Sim, use o botão "Restaurar Padrão" em "Temas e Visual".</p>
+
+                <h3>18.5 SELIC</h3>
+                
+                <h4>Q: Como importar dados SELIC?</h4>
+                <p>A: Acesse "SELIC" no menu, clique em "Importar" e selecione o arquivo.</p>
+
+                <h4>Q: Que formato de arquivo é aceito?</h4>
+                <p>A: Arquivos CSV (.csv) ou Excel (.xlsx) com colunas de mês/ano e taxa.</p>
+
+                <h4>Q: Posso editar dados SELIC?</h4>
+                <p>A: Sim, clique em "Editar" na linha desejada da tabela.</p>
+
+                <h3>18.6 Configurações</h3>
+                
+                <h4>Q: Como alterar dados da empresa?</h4>
+                <p>A: Acesse "Configurações do Sistema" no menu e edite os campos desejados.</p>
+
+                <h4>Q: As alterações aparecem em todas as telas?</h4>
+                <p>A: Sim, as alterações são refletidas automaticamente em todo o sistema.</p>
+
+                <h4>Q: Posso alterar meu e-mail?</h4>
+                <p>A: Sim, acesse "Perfil" no menu e clique em "Editar" no campo e-mail.</p>
+            </section>
+
+            <section id="glossario">
+                <h2>19. Glossário</h2>
+                
+                <h3>19.1 Termos Técnicos</h3>
+                
+                <h4>INSS:</h4>
+                <p>Instituto Nacional do Seguro Social. Sistema de previdência social brasileiro.</p>
+
+                <h4>SELIC:</h4>
+                <p>Sistema Especial de Liquidação e Custódia. Taxa básica de juros da economia brasileira.</p>
+
+                <h4>Simulação:</h4>
+                <p>Cálculo estimado de valores INSS para uma obra específica.</p>
+
+                <h4>Planejamento Tributário:</h4>
+                <p>Análise e otimização de aspectos tributários de uma operação.</p>
+
+                <h4>Dashboard:</h4>
+                <p>Tela inicial do sistema com resumo de informações e métricas.</p>
+
+                <h4>Sidebar:</h4>
+                <p>Menu lateral de navegação do sistema.</p>
+
+                <h4>Breadcrumb:</h4>
+                <p>Navegação hierárquica no topo das páginas.</p>
+
+                <h4>PDF:</h4>
+                <p>Portable Document Format. Formato de arquivo para documentos.</p>
+
+                <h4>CSV:</h4>
+                <p>Comma-Separated Values. Formato de arquivo para dados tabulares.</p>
+
+                <h3>19.2 Termos do Sistema</h3>
+                
+                <h4>Usuário:</h4>
+                <p>Pessoa que acessa o sistema com credenciais específicas.</p>
+
+                <h4>Administrador:</h4>
+                <p>Usuário com permissões especiais para gestão do sistema.</p>
+
+                <h4>Cliente:</h4>
+                <p>Tipo de usuário com acesso completo às simulações.</p>
+
+                <h4>Lead:</h4>
+                <p>Tipo de usuário com acesso limitado para visualização.</p>
+
+                <h4>Simulação:</h4>
+                <p>Registro de cálculo INSS para uma obra específica.</p>
+
+                <h4>Planejamento:</h4>
+                <p>Registro de análise tributária.</p>
+
+                <h4>Relatório:</h4>
+                <p>Documento gerado com dados do sistema.</p>
+
+                <h4>Tema:</h4>
+                <p>Configuração visual personalizada do sistema.</p>
+
+                <h4>Configuração:</h4>
+                <p>Parâmetro ajustável do sistema.</p>
+
+                <h4>Filtro:</h4>
+                <p>Critério para limitar resultados de busca.</p>
+
+                <h3>19.3 Abreviações</h3>
+                <ul>
+                    <li><strong>INSS:</strong> Instituto Nacional do Seguro Social</li>
+                    <li><strong>SELIC:</strong> Sistema Especial de Liquidação e Custódia</li>
+                    <li><strong>PDF:</strong> Portable Document Format</li>
+                    <li><strong>CSV:</strong> Comma-Separated Values</li>
+                    <li><strong>FAQ:</strong> Frequently Asked Questions (Perguntas Frequentes)</li>
+                    <li><strong>URL:</strong> Uniform Resource Locator</li>
+                    <li><strong>IP:</strong> Internet Protocol</li>
+                </ul>
+            </section>
+
+            <section id="conclusao">
+                <h2>Conclusão</h2>
+                <p>Este manual abrange todas as funcionalidades do sistema <strong>Calculadora INSS Obra Legal</strong>, fornecendo orientações detalhadas para usuários de todos os níveis.</p>
+                
+                <p>Para obter o máximo do sistema:</p>
+                <ul>
+                    <li>Leia atentamente cada seção</li>
+                    <li>Pratique as funcionalidades</li>
+                    <li>Use as dicas de usabilidade</li>
+                    <li>Mantenha dados organizados</li>
+                    <li>Entre em contato com o suporte quando necessário</li>
+                </ul>
+                
+                <p>O sistema está em constante evolução. Novas funcionalidades e melhorias são implementadas regularmente. Mantenha-se atualizado consultando este manual periodicamente.</p>
+                
+                <h3>Bom trabalho!</h3>
+            </section>
+
+
+        </main>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Scroll suave para navegação
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (this.hash) {
+                e.preventDefault();
+                document.querySelector(this.hash).scrollIntoView({ behavior: 'smooth' });
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            }
+        });
+    });
+</script>
+</body>
+</html>

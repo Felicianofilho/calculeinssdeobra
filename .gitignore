@@ -1,0 +1,37 @@
+# --- Credenciais / configuração local ---
+/config/config.php
+/config/config-local.php
+/config/local_settings.php
+.env
+.env.*
+
+# --- Dependências (instalar com: composer install) ---
+/vendor/
+/node_modules/
+
+# --- Uploads e arquivos gerados (dados de clientes - LGPD) ---
+/public/uploads/**
+!/public/uploads/**/
+!/public/uploads/**/.gitkeep
+
+# --- Logs, debug, temporários ---
+*.log
+*.tmp
+*.cache
+*.lock.tmp
+
+# --- Backups ---
+*.bak
+*.backup*
+*-bkp.*
+*.old
+*.sql
+*.zip
+
+# --- IDE / SO ---
+*.code-workspace
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

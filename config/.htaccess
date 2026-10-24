@@ -1,0 +1,7 @@
+# Negar acesso a todos os arquivos neste diretório
+Order Allow,Deny
+Deny from all
+
+# Mensagem de erro personalizada
+ErrorDocument 403 "Acesso negado - Diretório protegido"
+

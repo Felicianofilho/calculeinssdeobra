@@ -1,0 +1,92 @@
+# Configurações de Segurança
+<IfModule mod_headers.c>
+    # Headers básicos de segurança
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    
+    # HSTS apenas em HTTPS (condicional)
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+    
+    # Content Security Policy
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://code.jquery.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: blob:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'"
+    
+    # Ocultar informações do servidor
+    Header unset Server
+    Header unset X-Powered-By
+</IfModule>
+
+# Configurações de servidor
+<IfModule mod_env.c>
+    SetEnv SERVER_ADMIN "admin@localhost"
+</IfModule>
+
+# Proteção de arquivos sensíveis
+<FilesMatch "\.(env|log|sql|bak|backup|old|tmp|temp)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Proteção de diretórios sensíveis
+RedirectMatch 403 ^/config/
+RedirectMatch 403 ^/src/
+RedirectMatch 403 ^/vendor/
+RedirectMatch 403 ^/docs/
+
+# Proteção contra directory traversal
+RewriteEngine On
+RewriteCond %{THE_REQUEST} \s[^?]*\.\.(\\|/)
+RewriteRule .* - [F,L]
+
+# Redirecionamento principal (funciona em qualquer ambiente)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Roteamento principal
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    # Excluir arquivos do sistema do roteamento para evitar loop
+    RewriteCond %{REQUEST_URI} !/(404\.(html|php)|router\.php)$
+    RewriteRule ^(.*)$ router.php [L]
+</IfModule>
+
+# Configuração de páginas de erro (gerenciadas pelo router.php)
+# ErrorDocument removido - o router gerencia automaticamente
+
+# Configurações de cache para recursos estáticos
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+</IfModule>
+
+# Compressão GZIP
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# Configurações de segurança adicionais
+Options -Indexes -ExecCGI
+ServerSignature Off
+
+# Limite de tamanho de upload (ajustar conforme necessário)
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+php_value max_execution_time 300
+php_value max_input_time 300
+

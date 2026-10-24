@@ -1,0 +1,74 @@
+# Configurações de segurança específicas para o diretório public
+
+# Proteção de arquivos sensíveis
+<FilesMatch "\.(env|log|sql|bak|backup|old|tmp|temp|ini|conf)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Proteção contra acesso direto a arquivos PHP sensíveis
+<FilesMatch "^(config|database|auth|admin_vau_actions)\.php$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Proteção específica para admin_settings_actions.php - permitir apenas POST
+<Files "admin_settings_actions.php">
+    Order Allow,Deny
+    Allow from all
+    <LimitExcept POST>
+        Deny from all
+    </LimitExcept>
+</Files>
+
+# Proteção específica para admin_theme_actions.php - permitir apenas POST
+<Files "admin_theme_actions.php">
+    Order Allow,Deny
+    Allow from all
+    <LimitExcept POST>
+        Deny from all
+    </LimitExcept>
+</Files>
+
+# Headers de segurança específicos para arquivos estáticos
+<IfModule mod_headers.c>
+    # Para arquivos CSS e JS
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=2592000"
+        Header set X-Content-Type-Options "nosniff"
+    </FilesMatch>
+    
+    # Para imagens
+    <FilesMatch "\.(jpg|jpeg|png|gif|svg|webp)$">
+        Header set Cache-Control "public, max-age=2592000"
+        Header set X-Content-Type-Options "nosniff"
+    </FilesMatch>
+</IfModule>
+
+# Proteção contra hotlinking de imagens
+RewriteEngine On
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?webfortaleza\.com\.br [NC]
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?calculeinssdeobra\.com\.br [NC]
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?localhost [NC]
+RewriteCond %{HTTP_REFERER} !^https?://127\.0\.0\.1 [NC]
+RewriteRule \.(jpg|jpeg|png|gif|svg|webp)$ - [F,L]
+
+# Roteamento para páginas inexistentes no diretório public
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# Excluir arquivos específicos do roteamento
+RewriteCond %{REQUEST_URI} !/(404\.(html|php))$
+RewriteRule ^(.*)$ ../router.php [L]
+
+# Configurações de upload seguro
+<IfModule mod_php.c>
+    php_flag file_uploads On
+    php_value upload_max_filesize 10M
+    php_value post_max_size 10M
+    php_value max_execution_time 300
+    php_value max_input_time 300
+    php_flag allow_url_fopen Off
+    php_flag allow_url_include Off
+</IfModule>
+
