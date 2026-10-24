@@ -2,6 +2,7 @@
 /config/config.php
 /config/config-local.php
 /config/local_settings.php
+/dump_db.php
 .env
 .env.*
 

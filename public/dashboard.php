@@ -395,6 +395,7 @@ document.addEventListener("DOMContentLoaded", function() {
     adjustChartFonts();
 });
 </script>
+<?php include __DIR__ . '/includes/comunicado_migracao.php'; ?>
 </body>
 </html>
 
